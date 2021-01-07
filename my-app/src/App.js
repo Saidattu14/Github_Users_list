@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React, {useEffect,useState} from 'react';
+import { useFetch } from './Components/useFetch';
 import './App.css';
+const url = 'https://api.github.com/users';
 
-function App() {
+const App = () => {
+  const user_data = useFetch(url).data;
+  
+ 
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <React.Fragment>
+     <div className = "App">
+      <div className = "data">
+         <h1>Welcome to Github Users Data</h1>
+      </div>
+      
+      {
+        
+        user_data.map((obj)=> {
+          const {login,id,avatar_url} = obj;
+          return(
+            <div key = {id} className = "User_data">
+              <img src = {avatar_url} className = "Img"></img>
+              <div className = "Name">{login}</div>  
+            </div>
+          )
+        })
+      }
+     </div>
+   </React.Fragment>
   );
 }
 
