@@ -5,7 +5,7 @@ const User = () => {
 
   return (
    <React.Fragment>
-      <h1>Hello</h1>
+      hello
    </React.Fragment>
   );
 }

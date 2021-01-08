@@ -16,7 +16,7 @@ const App = () => {
          <Route  path = "/user">
             <User></User>
          </Route>
-        <Route exact path = '/'>
+        <Route exact path = '*'>
             <Home></Home>
           </Route>
         </Switch>

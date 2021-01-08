@@ -24,7 +24,7 @@ const Home = () => {
           const {login,id,avatar_url,url} = obj;
           return(
             
-                <Link to = "/user1">
+                <Link to = "/user">
                     <div key = {id} className = "User_data1" >
                       <img src = {avatar_url} className = "Img1"></img>
                       <div className = "Name1">{login}</div>  
