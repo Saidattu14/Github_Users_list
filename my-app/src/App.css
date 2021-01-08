@@ -65,4 +65,10 @@
   align-items: center;
   cursor: pointer;
   text-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  
+}
+.data > .h1 {
+  text-align: center;
 }

@@ -1,34 +1,30 @@
 import React, {useEffect,useState} from 'react';
 import { useFetch } from './Components/useFetch';
+import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './App.css';
+import User from './Components/userData';
+import Home  from './Components/home'
 const url = 'https://api.github.com/users';
 
 const App = () => {
-  const user_data = useFetch(url).data;
-  
- 
  
   return (
    <React.Fragment>
-     <div className = "App">
-      <div className = "data">
-         <h1>Welcome to Github Users Data</h1>
-      </div>
+      <Router>
+        <Switch>
+         <Route  path = "/user">
+            <User></User>
+         </Route>
+        <Route exact path = '/'>
+            <Home></Home>
+          </Route>
+        </Switch>
+     </Router>
       
-      {
-        
-        user_data.map((obj)=> {
-          const {login,id,avatar_url} = obj;
-          return(
-            <div key = {id} className = "User_data">
-              <img src = {avatar_url} className = "Img"></img>
-              <div className = "Name">{login}</div>  
-            </div>
-          )
-        })
-      }
-     </div>
-   </React.Fragment>
+       
+      </React.Fragment> 
+      
   );
 }
 

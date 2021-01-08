@@ -1,0 +1,79 @@
+.App1 {
+    max-width: 1590px;
+    min-width: 500px;
+    height: auto;
+    margin: auto;
+    width: 400px;
+    background-color: white;
+    text-align: center;
+    justify-content: space-around;
+    display: block;
+    text-decoration: none;
+  }
+  .User_data1
+  {
+  
+    width: 500px;
+    height: 120px;
+    margin: auto;
+    display: flex;
+    border-radius: 7%;
+    align-items: center;
+    border-bottom: 10px solid white;
+    border-top: 10px solid white;
+    cursor: pointer;
+    background-color: lavender;
+    transition-property: all;
+      transition-duration: 0.4s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+    box-shadow: lightblue;
+    
+  }
+  .a {
+      text-decoration: none;
+  }
+  
+  .User_data1 > .Img1
+  {
+    width: 100px;
+    height: 100px;
+    margin-left: 10%;
+    border-radius: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: none;
+   
+  }
+  .Name1
+  {
+    font-size: 1.5rem;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 500;
+    box-shadow: none;
+    text-decoration:white;
+    
+   
+  }
+  .data1{
+    
+    background-color: gold;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    
+  }
+  .data1 > .h1 {
+    text-align: center;
+  }
+  
