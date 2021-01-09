@@ -13,8 +13,7 @@ const App = () => {
    <React.Fragment>
       <Router>
         <Switch>
-         <Route  path = "/user">
-            <User></User>
+         <Route  path = "/user/:name" children ={ <User></User>}>
          </Route>
         <Route exact path = '*'>
             <Home></Home>

@@ -7,7 +7,7 @@ const url = 'https://api.github.com/users';
 
 
 const Home = () => {
-  const user_data = useFetch(url).data;
+  const user_data = useFetch(url,null).data;
   const [data, setData] = useState(true);
   const handler = (url,id) =>  {
   setData(false)
@@ -24,7 +24,7 @@ const Home = () => {
           const {login,id,avatar_url,url} = obj;
           return(
             
-                <Link to = "/user">
+                <Link to = {`/user/${login}`}>
                     <div key = {id} className = "User_data1" >
                       <img src = {avatar_url} className = "Img1"></img>
                       <div className = "Name1">{login}</div>  
