@@ -1,0 +1,31 @@
+.header
+{
+    max-width: 1590px;
+    min-width: 500px;
+}
+.name
+{
+    margin:auto;
+    text-align:center;
+}
+.name > .h1
+{
+    text-align:center;
+}
+
+
+.details
+{
+    display:block;
+    margin-left: 10%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: none;
+}
+.details > .img 
+{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+   
+}
