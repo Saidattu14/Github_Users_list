@@ -16,13 +16,17 @@ const Home = () => {
           <h1>Welcome to Github Users Data</h1>
         </div>
       { user_data.map((obj)=> {
-          const {login,id,avatar_url,url} = obj;
+        console.log(obj)
+          const {login,id,avatar_url,url,html_url} = obj;
           return(
             
                 <Link to = {`/user/${login}`}>
                     <div key = {id} className = "User_data1" >
                       <img src = {avatar_url} className = "Img1" alt = ""></img>
-                      <div className = "Name1">{login}</div>  
+                      <div>
+                        <div>Name : {login}</div>
+                        <a href = {html_url}>Github : {html_url}</a>
+                      </div> 
                     </div>
                 </Link>
             
