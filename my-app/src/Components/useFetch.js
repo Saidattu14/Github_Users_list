@@ -7,8 +7,7 @@ export const useFetch = (url,name) => {
         if(name !== null )
         {
             const response = await fetch(url);
-        const val = await response.json();
-            
+            const val = await response.json();
             const data = val.find((obj) => obj.login === name)
             setData(data);
            
@@ -16,7 +15,7 @@ export const useFetch = (url,name) => {
         else
         {
             const response = await fetch(url);
-        const val = await response.json();
+            const val = await response.json();
             const data = val;
             setData(data);
            

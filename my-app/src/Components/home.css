@@ -24,9 +24,9 @@
     cursor: pointer;
     background-color: lavender;
     transition-property: all;
-      transition-duration: 0.4s;
-      transition-timing-function: ease;
-      transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
     box-shadow: lightblue;
     
   }
@@ -38,21 +38,35 @@
   {
     width: 100px;
     height: 100px;
-    margin-left: 10%;
+    margin-left: 5%;
     border-radius: 50%;
     padding-left: 15px;
     padding-right: 15px;
     box-shadow: none;
    
   }
+  .pr
+  {
+    display:block;
+  }
+  .details_home
+  {
+    
+    display:block;
+    margin-left: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: none;
+  }
+ 
   .Name1
   {
     font-size: 1.5rem;
-      font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.5;
-      letter-spacing: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 500;

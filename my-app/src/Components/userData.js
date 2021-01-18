@@ -17,17 +17,23 @@ function User () {
    
        <div className = "header">
         <div className = "name">
-          <h1>Welcome to Github Users Data</h1>
-        </div>
+          <h1>Followers</h1>
+        </div >
+        <div className = "stf">
+        <div className = "stf">
         <Personal_data {...val}></Personal_data>
+        </div>
+        <div className = "pr">
+          
         {
           followers.map((obj) => {
-            const {login,id,avatar_url} = obj;
             return(
-              <Followers key = {id} {...followers}></Followers>
+              <Followers key = {obj} {...obj}></Followers>
             )
           })
         }
+        </div>
+        </div>
        </div>
   );
   
