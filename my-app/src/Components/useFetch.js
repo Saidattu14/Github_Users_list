@@ -15,13 +15,14 @@ export const useFetch = (url,name) => {
         else
         {
             const response = await fetch(url);
-            const val = await response.json();
-            const data = val;
+            const data= await response.json();
+
             setData(data);
            
         }};
     useEffect(() => {
         getUsers();
+
     }, [url]);
     return {data};
 };

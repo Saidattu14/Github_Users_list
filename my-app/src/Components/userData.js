@@ -6,15 +6,16 @@ import { useFetch } from './useFetch';
 import {Link, useLocation} from 'react-router-dom';
 import './user_data.css'
 function User (props) {
-  console.log(useParams())
-  let Loc = useLocation()
-  console.log(Loc)
+  
+  const Loc = useLocation();
+  
   const {login} = useParams();
   
-  const user_data = useFetch(url,login).data;
-  
+  const user_data = useFetch(Loc.state.url,null).data;
+  console.log(user_data)
   const {url} = (user_data);
   const val = useFetch(url,null).data;
+  console.log(val)
   const followers = useFetch(val.followers_url,null).data;
 
   return (
@@ -25,7 +26,7 @@ function User (props) {
         </div >
         <div className = "stf">
         <div className = "stf">
-        <Personal_data {...val}></Personal_data>
+        <Personal_data {...user_data}></Personal_data>
         </div>
         <div className = "pr">
           

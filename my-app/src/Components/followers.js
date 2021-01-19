@@ -3,11 +3,12 @@ import {Link} from 'react-router-dom';
 import './home.css'
 const Followers = (obj) => {
   const {login,avatar_url,html_url,url} = obj;
-  const [user,setUser] = useState(true);
+  
   return (
       <React.Fragment>
         <Link to = {{
           pathname : `/user/${login}`,
+          state: {url},
          }}>
         
         <div className = "User_data1">
