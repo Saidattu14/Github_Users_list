@@ -1,10 +1,15 @@
 import React, {useEffect,useState} from 'react';
+import {Link} from 'react-router-dom';
 import './home.css'
 const Followers = (obj) => {
-  const {login,avatar_url,html_url} =obj;
-
+  const {login,avatar_url,html_url,url} = obj;
+  const [user,setUser] = useState(true);
   return (
       <React.Fragment>
+        <Link to = {{
+          pathname : `/user/${login}`,
+         }}>
+        
         <div className = "User_data1">
         <img src = {avatar_url} className = "Img1" alt = ""></img>
         <div className = "details_home">
@@ -13,6 +18,7 @@ const Followers = (obj) => {
           {/* <a href={url}>Api:{url}</a> */}
         </div> 
         </div>
+        </Link>
       </React.Fragment>
   );
   

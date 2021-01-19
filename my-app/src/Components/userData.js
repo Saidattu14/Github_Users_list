@@ -3,12 +3,16 @@ import Followers from './followers';
 import Personal_data from './personal_data';
 import {useParams} from "react-router-dom"
 import { useFetch } from './useFetch';
+import {Link, useLocation} from 'react-router-dom';
 import './user_data.css'
-const url = 'https://api.github.com/users';
-function User () {
+function User (props) {
+  console.log(useParams())
+  let Loc = useLocation()
+  console.log(Loc)
   const {login} = useParams();
-  const ur = 'https://api.github.com/users';
-  const user_data = useFetch(ur,login).data;
+  
+  const user_data = useFetch(url,login).data;
+  
   const {url} = (user_data);
   const val = useFetch(url,null).data;
   const followers = useFetch(val.followers_url,null).data;
@@ -28,6 +32,7 @@ function User () {
         {
           followers.map((obj) => {
             return(
+              
               <Followers key = {obj} {...obj}></Followers>
             )
           })
